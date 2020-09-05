@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,3 +9,100 @@
 $beige: #FCE4C8;
 $purple: #1C0D24;
 $pink: #F37E91;
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 5;
+
+    div {
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        border-radius: 4px;
+        margin: 5px;
+        background-blend-mode: difference;
+    }
+
+    #bottom-bar {
+        width: 25px;
+    }
+}
+
+.landing {
+    height: 100vh;
+    width: 100vw;
+    background: $pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    h1 {
+        font-size: 6em;
+        z-index: 2;
+    }
+
+    #left-text {
+        color: $beige;
+        transform: translateY(-50px);
+    }
+
+    #right-text {
+        color: $pink;
+        transform: translateY(50px);
+        margin-right: 2.7em;
+    }
+
+    #right-purple {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(66% 0, 100% 0, 100% 100%, 33% 100%);
+        background: $purple;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #arrow {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        border: solid white;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        transform: rotate(45deg);
+        z-index: 2;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    #arrow-caption {
+        width: 180px;
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-70px);
+        color: white;
+        font-size: 1.2em;
+        opacity: 0;
+    }
+}
+
+.projects {
+    width: 100vw;
+    height: 100vh;
+    background-color: $beige;
+}
